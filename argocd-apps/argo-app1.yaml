@@ -9,7 +9,7 @@ metadata:
 spec:
   project: default
   source:
-    path: applications/applications/app1
+    path: applications/app1
     repoURL: https://github.com/reddymanjesh/argocd.git
     targetRevision: HEAD
   destination:
