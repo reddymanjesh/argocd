@@ -1,0 +1,17 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: k8d-eks
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    path: applications/dashboard
+    repoURL: https://github.com/reddymanjesh/argocd.git
+    targetRevision: HEAD
+  destination:
+    namespace: kubernetes-dashboard
+    server: https://718244AFCA61EAE847F5FBD19E3D1DDF.gr7.us-east-1.eks.amazonaws.com
